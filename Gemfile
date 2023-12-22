@@ -12,7 +12,7 @@ gem 'smarter_csv', require: false
 gem 'acts-as-taggable-on'
 gem 'cancancan'
 gem 'axlsx', github: 'randym/axlsx', branch: 'master'
-gem 'sentry-raven'
+gem 'sentry-ruby'
 gem 'nokogiri'
 gem 'rubyzip', '1.3.0'
 
@@ -51,3 +51,5 @@ group :test do
   gem 'rspec-rails'
   gem 'database_rewinder'
 end
+
+gem 'mini_portile2', '~> 2.8', '>= 2.8.1'
