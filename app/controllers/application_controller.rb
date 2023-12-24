@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Concerns::Event
+  include EventConcern
 
   protect_from_forgery with: :exception
 

@@ -1,4 +1,4 @@
-module Concerns::Event
+module EventConcern
   extend ActiveSupport::Concern
 
   def log_event(entity:, action:)
