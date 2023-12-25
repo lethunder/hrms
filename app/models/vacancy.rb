@@ -11,7 +11,7 @@ class Vacancy < ActiveRecord::Base
     }
   validates :status, inclusion: { in: STATUSES }
 
-  after_save :create_tag, on: :commit
+  after_commit :create_tag, on: :create
 
   private
 

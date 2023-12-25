@@ -5,7 +5,6 @@ class Ability
     user ||= User.new
 
     can :manage, ActionPoint
-    can :manage, Attachment
     if user.has_access_to_dayoffs?
       can :manage, Dayoff
     else

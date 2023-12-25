@@ -17,7 +17,7 @@ module ApplicationHelper
 
   def active_class(path, exclude_str: nil)
     return '' if exclude_str && request.fullpath.include?(exclude_str.to_s)
-    'active' if URI.decode(request.fullpath).starts_with?(path)
+    #'active' if URI.decode(request.fullpath).starts_with?(path)
   end
 
   def with_newlines(str)
