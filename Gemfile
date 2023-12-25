@@ -55,7 +55,7 @@ gem "sassc-rails"
 #
 
 gem 'dotenv-rails'
-gem 'ransack'
+gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'warden'
 gem 'devise'
 gem 'smarter_csv', require: false
