@@ -2,7 +2,7 @@ class Person < ActiveRecord::Base
   include ChangesTracker
 
   acts_as_taggable_on :tags
-  attachment :photo
+  has_one_attached :photo
 
   PRIMARY_TECHS = [
     'Android',
@@ -50,7 +50,7 @@ class Person < ActiveRecord::Base
   SALARY_TYPES = %w(Monthly Hourly)
 
   has_many :action_points
-  has_many :attachments
+  has_many_attached :attachments
   has_many :dayoffs
   has_many :expenses
   has_many :notes

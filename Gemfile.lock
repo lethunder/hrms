@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: cc624b97930af59c0fbe5f1226951684f8433810
+  specs:
+    ransack (4.1.1)
+      activerecord (>= 6.1.5)
+      activesupport (>= 6.1.5)
+      i18n
+
+GIT
   remote: https://github.com/randym/axlsx.git
   revision: 8e7b4b3b7259103452c191f73ce0bf64f66033fe
   branch: master
@@ -277,10 +286,6 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.1.0)
-    ransack (4.0.0)
-      activerecord (>= 6.1.5)
-      activesupport (>= 6.1.5)
-      i18n
     rb-readline (0.5.5)
     rdoc (6.6.2)
       psych (>= 4.0.0)
@@ -449,7 +454,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.1.2)
   rails-jquery-autocomplete
-  ransack
+  ransack!
   rb-readline
   redis (~> 4.0)
   rspec-rails (>= 3.5.0)
