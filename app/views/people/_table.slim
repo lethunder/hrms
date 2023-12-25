@@ -9,7 +9,7 @@
       | &nbsp;
       a href="#{edit_person_path(record)}"
         i.fa.fa-pencil
-      - if record.linkedin.blank? && record.attachments.empty?
+      - if record.linkedin.blank? && record.images.attached?
         br
         a.btn.btn-xs.btn-danger href="#{edit_person_path(record)}"
           | Linkedin / CV missing

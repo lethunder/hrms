@@ -13,6 +13,9 @@ class Expense < ActiveRecord::Base
 
   validate :recorded_on_greater_or_equal_person_start_date
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["amount", "created_at", "created_by_name", "id", "id_value", "notes", "person_id", "recorded_on", "type", "updated_at", "updated_by_name"]
+  end
   private
 
   def recorded_on_greater_or_equal_person_start_date

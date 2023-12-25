@@ -17,6 +17,9 @@ class Dayoff < ActiveRecord::Base
   validate :end_on_greater_or_equal_person_start_date
   validate :belongs_to_single_working_period
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["created_at", "created_by_name", "days", "end_on", "id", "id_value", "notes", "person_id", "start_on", "type", "updated_at", "updated_by_name"]
+  end
   private
 
   def belongs_to_single_working_period

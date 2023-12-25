@@ -12,7 +12,10 @@ class Event < ActiveRecord::Base
       user: user
     )
   end
-  
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["action", "created_at", "entity_id", "entity_type", "id", "id_value", "params", "params_as_str", "updated_at", "user_id"]
+  end
   private
 
   ransacker :params_as_str do

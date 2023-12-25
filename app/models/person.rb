@@ -51,6 +51,7 @@ class Person < ActiveRecord::Base
 
   has_many :action_points
   has_many_attached :attachments
+  has_many_attached :images
   has_many :dayoffs
   has_many :expenses
   has_many :notes
@@ -95,6 +96,9 @@ class Person < ActiveRecord::Base
     end
   end
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["action_points_count", "attachments_count", "city", "contractor_company_name", "contractor_manager_contacts", "created_at", "created_by_name", "current_position", "day_of_birth", "email", "employee_id", "english", "expected_salary", "finish_date", "github", "id", "id_value", "is_deleted", "last_one_on_one_meeting_at", "last_performance_review_at", "linkedin", "name", "next_performance_review_at", "notes_count", "personal_email", "phone", "photo_content_type", "photo_filename", "photo_id", "photo_size", "primary_tech", "salary_type", "signed_nda", "skills", "skip_reviews", "skype", "source", "start_date", "status", "telegram", "updated_at", "updated_by_name", "vacation_override"]
+  end
 private
 
   def cleanup

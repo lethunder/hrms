@@ -13,6 +13,10 @@ class Vacancy < ActiveRecord::Base
 
   after_commit :create_tag, on: :create
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["created_at", "created_by_name", "description", "id", "id_value", "project", "role", "status", "tag", "updated_at", "updated_by_name"]
+  end
+
   private
 
   def create_tag
