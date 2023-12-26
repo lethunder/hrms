@@ -33,7 +33,7 @@ class PeopleController < ApplicationController
 
   def show
     @action_point = ActionPoint.new(person: @person)
-    @attachment = Attachment.new(person: @person)
+    @attachment = @person.attachments
     @dayoff = Dayoff.new(person: @person)
     @expense = Expense.new(person: @person)
     @note = Note.new(person: @person)

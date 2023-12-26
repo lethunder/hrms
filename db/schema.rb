@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_25_170706) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_25_212913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -121,16 +121,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_25_170706) do
     t.string "status", default: "n/a", null: false
     t.boolean "is_deleted", default: false, null: false
     t.integer "action_points_count", default: 0
-    t.integer "attachments_count", default: 0
     t.integer "notes_count", default: 0
     t.string "expected_salary"
     t.date "start_date"
     t.string "source"
     t.integer "vacation_override"
-    t.string "photo_id"
-    t.string "photo_filename"
-    t.integer "photo_size"
-    t.string "photo_content_type"
     t.text "skills"
     t.date "finish_date"
     t.string "current_position"
@@ -149,7 +144,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_25_170706) do
     t.string "contractor_company_name"
     t.text "contractor_manager_contacts"
     t.index ["action_points_count"], name: "index_people_on_action_points_count"
-    t.index ["attachments_count"], name: "index_people_on_attachments_count"
     t.index ["is_deleted"], name: "index_people_on_is_deleted"
     t.index ["notes_count"], name: "index_people_on_notes_count"
     t.index ["status"], name: "index_people_on_status"

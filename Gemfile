@@ -148,3 +148,5 @@ group :test do
 end
 
 gem 'mini_portile2', '~> 2.8', '>= 2.8.1'
+
+gem "image_processing", ">= 1.2"

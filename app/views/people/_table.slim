@@ -21,7 +21,7 @@
         = link_to (record.status.presence || 'n/a'), people_path(q: {status_eq: record.status}), { style: 'color: black' }
       - if record.start_date.present?
         | Start:&nbsp;
-        = record.start_date.strftime(t(:datetime_full)).gsub('00:00, ', '')
+      = record.start_date.strftime(t(:datetime_full)).gsub('00:00, ', '')
         br
       - if record.finish_date.present?
         | Finish:&nbsp;
@@ -57,7 +57,7 @@
 
       = link_to '+ Action', new_action_point_path(action_point: { person_id: record.id })
     td
-      - if (record.attachments_count || 0) > 0
+      - if (record.attachments.attached? )
         | Attachments:&nbsp;
         br
         - record.attachments.each do |attachment|
