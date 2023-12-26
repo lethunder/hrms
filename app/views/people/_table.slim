@@ -21,7 +21,7 @@
         = link_to (record.status.presence || 'n/a'), people_path(q: {status_eq: record.status}), { style: 'color: black' }
       - if record.start_date.present?
         | Start:&nbsp;
-      = record.start_date.strftime(t(:datetime_full)).gsub('00:00, ', '')
+      = record.start_date&.strftime(t(:datetime_full))
         br
       - if record.finish_date.present?
         | Finish:&nbsp;
